@@ -1,70 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
 </head>
+
 <body>
     <div id="container">
         <div id="leftdiv">
             <div id="productlogo">
-                <img id="logo" src="logo.svg"/>
-                <p class="textoverdark" id="producttitle" >gras</p>
+                <img id="logo" src="logo.svg" />
+                <p class="light-text" id="producttitle">g|ras</p>
             </div>
-            <div id="copyright-text">
+            <div id="copyright-text" class="light-text">
                 <p class="textoverdark">Photo by <a href="">Halie West</a> on <a href="">Unsplash</a></p>
             </div>
         </div>
         <div id="rightdiv">
-            <p class="welcome-message">One window operation to surveillance and management. View live videos, watch recordings, and authorize access.</p>
-            <p class="welcome-message">Signup now!</p>
+            <div class="welcome-message">
+                <p class="dark-text">One window operation to surveillance and management. View live videos, watch recordings, and
+                    authorize access.</p>
+                
+            </div>
             <div id="form">
+                
                 <form>
-                    <div id="form-div">
-                    <div class="form-row">
-                    <p>
-                        <label>FIRST NAME</label>
-                        <input type="text"/>
-                    </p>
-
-                    <p>
-                        <label>LAST NAME</label>
-                        <input type="text"/>
-                    </p>
-                    </div>
                     
-                    <div class="form-row">
-                    <p>
-                        <label>EMAIL</label>
-                        <input type="text"/>
-                    </p>
+                    <div id="form-div">
+                        <h2 class="dark-text" style="color:rgb(6, 95, 67)">Sign up</h2>
+                        <div class="form-row">
+                            <p>
+                                <label>FIRST NAME</label>
+                                <input type="text" />
+                            </p>
 
-                    <p>
-                        <label>PHONE NUMBER</label>
-                        <input type="text"/>
-                    </p>
+                            <p>
+                                <label>LAST NAME</label>
+                                <input type="text" />
+                            </p>
+                        </div>
+
+                        <div class="form-row">
+                            <p>
+                                <label>EMAIL</label>
+                                <input type="text" id="email" name="email"  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" />
+
+                            </p>
+
+                            <p>
+                                <label>PHONE NUMBER</label>
+                                <input type="text" />
+                            </p>
+                        </div>
+
+                        <div class="form-row">
+                            <p>
+                                <label for="password">PASSWORD</label>
+                                <input type="password" name="password" id="password"
+                                    pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" />
+                            </p>
+
+                            <p>
+                                <label for="confirm-password">CONFIRM PASSWORD</label>
+                                <input type="password" name="confirm-password" id="confirm-password"
+                                    pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" />
+                            </p>
+                        </div>
                     </div>
-
-                    <div class="form-row">
-                    <p>
-                        <label>PASSWORD</label>
-                        <input type="text"/>
-                    </p>
-
-                    <p>
-                        <label>CONFIRM PASSWORD</label>
-                        <input type="text"/>
-                    </p>
-                    </div>
-                </div>
-                <button>Create Account</button>
+                    <button id="button-create-account">Create Account</button>
                 </form>
 
             </div>
-            <p>Already have an account? <span>Log in</span></p>
+            <p id="login-query" class="dark-text">Already have an account? <a href="">Log in</a></p>
         </div>
     </div>
 </body>
+
 </html>
